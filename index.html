@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paulo Melendez Corrales</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <video autoplay muted loop id="background-video">
+        <source src="videos/fondo.mp4" type="video/mp4">
+        Tu navegador no soporta el elemento de video.
+    </video>
+    <main>
+        <div class="profile-header">
+            <img src="img/fornite.jpg" alt="Banner" class="banner">
+        <img src="img/perfil2.jpg" class="profile-picture"  alt="Profile Picture" style="width: 150px; border-radius: 50%;">
+    </div>
+        <div class="typing-container" id="typing"></div><sup>19 años</sup>
+        <h1 class="hashtag">Estudiante de tecsup - 5to ciclo - diseño y desarrollo de software</h1>
+        <div class="marquee">
+            <h2 class="marquee-content">Frontend Developer 👨‍💻 - Project Manager 📈 - Tech Enthusiast 💻 - Linux Enthusiast 🐧 - YouTuber 🎥 - IT Support - Computer Architecture Student 🖥️ - AI Developer 🤖 - Technical Developer - TECSUP Student 🎓 - 3D Modeling 🎨</h2>
+        </div>
+        <p class="hover-paragraph">💻✨ Soy un desarrollador frontend apasionado por crear interfaces web modernas y funcionales 🌐🎨. Soy alguien autodidacta 📚🤓, alguien que le gusta aprender de todo un poco 🧠💡 y tratar de desarrollarse en diversos temas de tecnología 🖥️📱. Me gusta mucho la música 🎶🎵 y siempre busco nuevas formas de mejorar 🚀🌟.</p>
+        <ul class="skills-list">
+            <li class="skill">☕ JavaScript</li>
+            <li class="skill">🌌 Astro</li>
+            <li class="skill">⚛️ React</li>
+            <li class="skill">🅰️ Angular</li>
+            <li class="skill">🐍 Python</li>
+            <li class="skill">📄 HTML</li>
+            <li class="skill">🎨 CSS</li>
+            <li class="skill">🌊 TailwindCSS</li>
+            <li class="skill">🛠️ Bootstrap</li>
+            <li class="skill">🐍 Django</li>
+            <li class="skill">🐙 GitHub</li>
+        </ul>
+        <ul class="social-links">
+            <li>
+                <a href="https://www.linkedin.com/in/paulo-melendez-corrales/" target="_blank">
+                    <img src="/img/linkedin.svg" alt="LinkedIn" /> LinkedIn
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/PAU45" target="_blank">
+                    <img src="/img/github.svg" alt="GitHub" /> GitHub
+                </a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/@paulito_god" target="_blank">
+                    <img src="/img/youtube.svg" alt="YouTube" /> YouTube
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/paulito_god/" target="_blank">
+                    <img src="/img/ig.svg" alt="Instagram" /> Instagram
+                </a>
+            </li>
+            <li>
+                <a href="https://www.tiktok.com/@paulin89xd" target="_blank">
+                    <img src="/img/tiktok.svg" alt="TikTok" /> TikTok
+                </a>
+            </li>
+        </ul>
+    </main>
+   
+    <script>
+        const text = "¡Hola! Soy Paulo Melendez";
+        let index = 0;
+        function type() {
+            if (index < text.length) {
+                document.getElementById("typing").innerHTML += text.charAt(index);
+                index++;
+                setTimeout(type, 100);
+            } else {
+                setTimeout(() => {
+                    document.getElementById("typing").innerHTML = "";
+                    index = 0;
+                    type();
+                }, 2000);
+            }
+        }
+        type(); 
+    </script>
+</body>
+</html>
+
